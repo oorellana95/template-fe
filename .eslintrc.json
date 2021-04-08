@@ -1,0 +1,25 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "prettier"],
+    "extends": ["react-app", "eslint:recommended"],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": ["error"],
+      "@typescript-eslint/no-var-requires": "off",
+      "no-console": "warn",
+      "no-debugger": "error",
+      "no-duplicate-imports": "error",
+      "no-else-return": "warn",
+      "no-return-await": "warn",
+      "no-unused-vars": "off",
+      "no-var": "warn",
+      "prettier/prettier": "error"
+    },
+    "overrides": [
+      {
+        "files": ["*.json"],
+        "rules": {
+          "no-unused-expressions": "off"
+        }
+      }
+    ]
+  }
