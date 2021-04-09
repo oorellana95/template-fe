@@ -3,7 +3,7 @@ name: Merge to pre CI
 on:
   push:
     branches: [pre]
-  pull-request:
+  pull_request:
     branches: [pre]
 
 jobs:
