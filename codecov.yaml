@@ -19,7 +19,7 @@ comment:
   require_changes: false
   require_base: no
   require_head: yes
-  branches:
-    - 'main'
-    - 'pre'
-    - 'develop'
+    branches:
+      - 'main'
+      - 'pre'
+      - 'develop'
