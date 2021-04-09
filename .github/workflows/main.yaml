@@ -1,10 +1,10 @@
-name: Merge to pre CI
+name: Merge to main CI
 
 on:
   push:
-    branches: [pre]
+    branches: [main]
   pull_request:
-    branches: [pre]
+    branches: [main]
 
 jobs:
   build_application:
