@@ -2,7 +2,7 @@
 
 <!--- Describe the problems to solve -->
 
-#### :octocat: Developer checklist
+#### :clipboard: Developer checklist
 
 - [ ] Check for warnings
 - [ ] Manual Test
@@ -16,6 +16,6 @@
 
 <!--- Visual changes -->
 
-#### :black_joker: GIF
+#### :octocat: GIF
 
 <!--- ![](add me) -->
