@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js ${{ matrix.node-version }}
+      - name: Set up Node.js 14.x
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
@@ -29,3 +29,11 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Upload coverage to Codecov
+      - uses: codecov/codecov-action@v1
+        with:
+          files: ./coverage1.xml,./coverage2.xml
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          verbose: true
