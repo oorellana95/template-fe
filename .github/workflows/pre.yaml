@@ -1,0 +1,36 @@
+name: Merge to develop CI
+
+on:
+  push:
+    branches: [pre]
+
+jobs:
+  build_application:
+    name: Build application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+
+      - name: Run the tests and generate coverage report
+        run: npm test -- --coverage
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
