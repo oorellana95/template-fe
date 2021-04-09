@@ -1,0 +1,25 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 80%
+        threshold: 1%
+
+      branches:
+        - 'main'
+        - 'pre'
+
+      if_ci_failed: error
+      informational: false
+      only_pulls: true
+
+comment:
+  layout: 'reach, diff, flags, files'
+  behavior: default
+  require_changes: false
+  require_base: no
+  require_head: yes
+  branches:
+    - 'main'
+    - 'pre'
+    - 'develop'
