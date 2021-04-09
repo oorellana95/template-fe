@@ -3,6 +3,8 @@ name: Merge to develop CI
 on:
   push:
     branches: [pre]
+  pull-request:
+    branches: [pre]
 
 jobs:
   build_application:
