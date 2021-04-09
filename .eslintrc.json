@@ -18,7 +18,7 @@
     {
       "files": ["*.json"],
       "rules": {
-        "no-unused-expressions": "true"
+        "no-unused-expressions": "false"
       }
     }
   ]
