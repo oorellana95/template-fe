@@ -1,4 +1,4 @@
-name: Merge to develop CI
+name: Merge to main CI
 
 on:
   push:
